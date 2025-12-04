@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontak — PT. Vestia Cinta Abadi</title>
+  <meta name="description" content="Hubungi tim kami untuk kolaborasi, kemitraan, atau pertanyaan seputar layanan." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PT Vestia Cinta Abadi</a>
+      <nav class="main-nav">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="contact.html" class="active">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="container" style="padding-top:64px; padding-bottom:40px;">
+      <h1>Hubungi Kami</h1>
+      <p class="lead" style="max-width:600px;">
+        Punya ide proyek, pertanyaan, atau ingin mulai kolaborasi?  
+        Kami siap bantu. Isi formulir di bawah dan tim kami akan menghubungi Anda.
+      </p>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="container" style="padding-bottom:64px;">
+      <div class="card" style="max-width:600px; margin:0 auto;">
+        <form action="https://formspree.io/f/xyyqojgp" method="POST">
+          
+          <label for="name" style="font-weight:600;">Nama</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+            style="width:100%; padding:12px; margin:8px 0 18px; border-radius:8px; border:1px solid #d0d7e2;">
+
+          <label for="email" style="font-weight:600;">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            style="width:100%; padding:12px; margin:8px 0 18px; border-radius:8px; border:1px solid #d0d7e2;">
+
+          <label for="message" style="font-weight:600;">Pesan</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5"
+            required
+            style="width:100%; padding:12px; margin:8px 0 22px; border-radius:8px; border:1px solid #d0d7e2;"></textarea>
+
+          <button
+            type="submit"
+            style="width:100%; padding:14px; background:var(--accent); border:none; color:white; font-weight:600; border-radius:var(--radius); cursor:pointer;">
+            Kirim Pesan
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ALT CONTACT -->
+    <section class="container" style="padding-bottom:48px; text-align:center;">
+      <p class="lead">
+        Atau hubungi kami melalui email:  
+        <strong>contact@vca.co.id</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> PT Vestia Cinta Abadi. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

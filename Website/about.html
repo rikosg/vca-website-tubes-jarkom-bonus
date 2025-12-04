@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tentang PT Vestia Cinta Abadi</title>
+  <meta name="description" content="Studi kasus jaringan PT Vestia Cinta Abadi untuk implementasi NAT, DNS, SMTP, HTTP, dan ACL." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">PT Vestia Cinta Abadi</a>
+      <nav class="main-nav">
+        <a href="index.html">Beranda</a>
+        <a href="about.html" class="active">Tentang</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Tentang Perusahaan & Studi Kasus</h1>
+        <p class="lead">
+          PT Vestia Cinta Abadi (VCA) adalah perusahaan digital entertainment dengan kebutuhan jaringan kompleks yang mencakup manajemen,
+          produksi konten, server publik, serta layanan internal berbasis DNS, HTTP, SMTP, dan NAT.
+        </p>
+      </div>
+      <figure class="hero-image">
+        <img src="images/vestiayes.jpg" alt="Kompleks kantor PT VCA">
+      </figure>
+    </section>
+
+    <section class="container">
+      <h2>Profil Perusahaan</h2>
+      <p>
+        PT Vestia Cinta Abadi (VCA) bergerak di industri virtual content creation dan menaungi sejumlah virtual streamer populer di Indonesia.
+        Pertumbuhan talenta dan tim produksi membuat VCA melakukan ekspansi infrastruktur dengan membangun dua gedung utama:
+      </p>
+
+      <ul>
+        <li><strong>Gedung 1 — Manajemen & Administrasi</strong>: PC Office, PC Admin, server Finance/HR, serta WAP untuk tamu.</li>
+        <li><strong>Gedung 2 — Studio & Produksi</strong>: Data Center, PC Design, PC Ops, PC Stream, serta server Desain dan server Streaming.</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <h2>Studi Kasus Jaringan</h2>
+      <p>
+        Studi kasus ini diambil langsung dari spesifikasi Tugas Besar II2120 Jaringan Komputer ITB.  
+        Sistem jaringan PT VCA mencakup empat subnet internal (A, B, C, D) dan satu subnet DMZ untuk server publik.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Subnet A & B (Gedung 1)</h3>
+          <p>Office, Admin, Finance server, dan WAP tamu. Bersifat private dan tidak dapat diakses publik.</p>
+        </article>
+
+        <article class="card">
+          <h3>Subnet C & D (Gedung 2)</h3>
+          <p>PC Ops, PC Design, PC Stream, serta server desain dan server streaming. Private & isolated.</p>
+        </article>
+
+        <article class="card">
+          <h3>DMZ Server Publik</h3>
+          <p>3 server publik di Data Center yang diakses melalui NAT statis menggunakan blok publik 182.24.67.96/29.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>Layanan yang Dikembangkan</h2>
+      <ul>
+        <li><strong>NAT</strong>: Static NAT untuk server DMZ, PAT untuk subnet A–D.</li>
+        <li><strong>DNS</strong>: Hierarki multi-subnet dengan domain internal dan delegasi zona.</li>
+        <li><strong>SMTP</strong>: Email corporate (vca.co.id) untuk komunikasi antar-karyawan.</li>
+        <li><strong>HTTP</strong>: Web server internal dan publik.</li>
+        <li><strong>ACL</strong>: Pembatasan akses antar-subnet dan dari internet.</li>
+      </ul>
+      <p>
+        Semua konfigurasi, langkah-langkah, dan pengujian detail tertuang dalam laporan tugas besar yang disusun oleh  
+        <strong>Riko Satriya Giovanni</strong> (18224108).  
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> PT Vestia Cinta Abadi. Semua hak cipta dilindungi.</p>
+    </div>
+  </footer>
+</body>
+</html>
